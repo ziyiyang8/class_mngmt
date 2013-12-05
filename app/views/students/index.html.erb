@@ -1,4 +1,4 @@
-<h1>My Students</h1>
+<h1>All Students</h1>
 
 <table>
   <thead>
@@ -15,6 +15,7 @@
       <tr>
         <td><%= link_to student.full_name, student %></td>
         <td><%= student.title %></td>
+        <td><%= display_bio(student) %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
