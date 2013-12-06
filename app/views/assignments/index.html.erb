@@ -1,0 +1,28 @@
+<h1>My Assignments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Details</th>
+      <th>Due date</th>
+      <th>Done</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr><th>Pending Assignments</th></tr>
+    <%= render 'assignments_list', assignments: @pending_assignments %>
+    <tr><th>Completed Assignments</th></tr>
+    <%= render 'assignments_list', assignments: @completed_assignments %>
+
+  </tbody>
+</table>
+
+
+<br>
+
+<%= link_to 'New Assignment', new_assignment_path %>

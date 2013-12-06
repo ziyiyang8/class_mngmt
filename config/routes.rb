@@ -1,7 +1,9 @@
 ClassMngmt::Application.routes.draw do
+  resources :assignments
+
   resources :students
 
-  root to: 'students#index'
+  root to: 'assignments#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

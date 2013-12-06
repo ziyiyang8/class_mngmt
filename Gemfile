@@ -6,7 +6,12 @@ gem 'rails', '4.0.2'
 group :test, :development do
 	gem 'rspec-rails'
 	gem 'sqlite3'
+end
 
+group :test do
+	gem 'cucumber-rails'
+	gem 'capybara'
+	gem 'database_cleaner'
 end
 
 # Use sqlite3 as the database for Active Record
