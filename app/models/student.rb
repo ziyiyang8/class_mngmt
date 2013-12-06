@@ -8,6 +8,8 @@ class Student < ActiveRecord::Base
 
 	before_create :set_defaults
 
+	scope :ziyi, -> { where(full_name: 'Ziyi') }
+
 	private
 
 	def set_defaults
