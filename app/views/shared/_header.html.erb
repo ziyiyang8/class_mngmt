@@ -1,1 +1,6 @@
-<h3> <%= t('hello') %>. <%= Time.now %> </h3>
+<% if current_user %>
+	You are logged in as : <%= current_user.email %> from: <%= current_user.current_sign_in_ip %>
+	<%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+<% else %>
+	<%= link_to 'Log In', new_user_session_path %>
+<% end %>
